@@ -1,0 +1,436 @@
+/* =========================
+   BASIC RESET
+========================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #222;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    display: flex;
+    height: 70px;
+    align-items: center;
+    padding: 0 40px;
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    font-style: italic;
+    color: #e23744;
+}
+
+.location {
+    margin-left: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #444;
+}
+    .login-btn {
+    margin-left: auto;
+    padding:10px 22px;
+    border:1px solid #ddd;
+    background-color:#e23744;
+    color:white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    cursor:pointer;
+    transition: 0.3s;
+}
+    .login-btn:hover{
+    background-color: #c92f3b;
+}
+
+header button {
+    margin-left: auto;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    background-color: white;
+    color: #333;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+header button:hover {
+    background-color: #e23744;
+    color: white;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search {
+    position: relative;
+    padding: 25px 40px;
+}
+
+.search input {
+    width: 100%;
+    padding: 15px 45px 15px 15px;
+    font-size: 18px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.search input:focus {
+    border-color: #e23744;
+    box-shadow: 0 4px 12px rgba(226, 55, 68, 0.15);
+}
+
+.search input::placeholder {
+    color: #999;
+    font-size: 18px;
+}
+
+.search-icon {
+    position: absolute;
+    right: 55px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+}
+
+
+/* =========================
+   FOOD CATEGORIES
+========================= */
+
+.categories {
+    padding: 20px 40px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+    margin-bottom: 30px;
+}
+
+.categories::-webkit-scrollbar {
+    display: none;
+}
+
+.categories h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #222;
+}
+
+.food-card {
+    display: inline-block;
+    width: 140px;
+    margin-right: 25px;
+    text-align: center;
+    white-space: normal;
+    transition: 0.3s ease;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.food-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.food-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+.food-card:hover img {
+    transform: scale(1.05);
+}
+
+.food-card p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.price{
+    display: block;
+    margin-top: 6px;
+    font-size: 15px;
+    color: #e23744;
+    font-weight: bold;
+}
+
+
+/* =========================
+   BRANDS
+========================= */
+
+.brands {
+    padding: 30px 40px;
+    margin-bottom: 30px;
+}
+
+.brands h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #222;
+}
+
+.brand-card {
+    display: inline-block;
+    width: 150px;
+    margin-right: 25px;
+    text-align: center;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.brand-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.brand-logo {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #f5f5f5;
+}
+
+.brand-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.brand-card p {
+    margin-top: 12px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+/* =========================
+   OFFER
+========================= */
+
+.offer {
+    margin: 30px 40px;
+    padding: 30px;
+    background-color: #f8f8f8;
+    border-radius: 12px;
+    position: relative;
+    min-height: 180px;
+    margin-bottom: 30px;
+    transition: 0.3s ease;
+}
+
+.offer:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+}
+
+.offer h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.offer p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.offer button {
+    padding: 12px 24px;
+    background-color: #e23744;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.offer button:hover {
+    background-color: #c92f3b;
+    transform: translateY(-2px);
+}
+
+.offer-image {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    font-size: 80px;
+}
+
+
+/* =========================
+   LOGIN PAGE
+========================= */
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7f7f7;
+}
+
+.login-box {
+    width: 420px;
+    padding: 40px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.login-box h1 {
+    margin-bottom: 8px;
+    font-size: 28px;
+}
+
+.login-box p {
+    margin-bottom: 25px;
+    color: #777;
+    font-size: 15px;
+}
+
+.login-box input {
+    width: 100%;
+    height: 50px;
+    padding: 0 15px;
+    margin-bottom: 18px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.login-box input:focus {
+    border-color: #e23744;
+}
+
+.login-box button {
+    width: 100%;
+    height: 50px;
+    background-color: #e23744;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background-color: #c92f3b;
+}
+.login-logo{
+    text-align: center;
+    font-size: 38px;
+    font-weight: 700;  
+    font-style: italic;
+    color: #e23744;
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 0 15px;
+        height: 65px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .location {
+        margin-left: 15px;
+        font-size: 14px;
+    }
+
+    header button {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+
+    .search {
+        padding: 15px;
+    }
+
+    .search input {
+        padding: 13px 40px 13px 13px;
+        font-size: 16px;
+    }
+
+    .search input::placeholder {
+        font-size: 16px;
+    }
+
+    .search-icon {
+        right: 30px;
+    }
+
+    .categories {
+        padding: 15px;
+    }
+
+    .categories h2 {
+        font-size: 21px;
+    }
+
+    .brands {
+        padding: 20px 15px;
+    }
+
+    .offer {
+        margin: 20px 15px;
+        padding: 20px;
+    }
+
+    .offer h2 {
+        font-size: 22px;
+    }
+
+    .offer-image {
+        right: 15px;
+        top: 50px;
+        font-size: 50px;
+    }
+
+}
